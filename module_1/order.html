@@ -17,38 +17,37 @@
 
 <h1>Заказать IPhone 13 Pro Max</h1>
 
-<form action="">
+<form action="https://webhook.site/a7ffe38f-97c0-4faf-99c3-d15d1202d56a" method="post">
     <div>
         <label>
             Имя:
-            <input type="text" name="name">
+            <input type="text" name="name" required >
         </label>
     </div>
     <br>
     <div>
         <label>
             Фамилия:
-            <input type="text" name="surname">
+            <input type="text" name="surname" required >
         </label>
     </div>
     <br>
     <div>
         <label>
             Телефон:
-            <select name="code-tel">
-                <option value="+371">+371</option>
-                <option value="+399">+399</option>
-                <option value="+499">+499</option>
-                <option value="+899">+899</option>
+            <select name="code-tel" required>
+                <option value="+375">+375</option>
+                <option value="+7">+7</option>
+                <option value="+380">+380</option>
             </select>
-            <input type="tel" name="number-tel">
+            <input type="text" name="number-tel" required >
         </label>
     </div>
     <br>
     <div>
         <label>
             Email:
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </label>
     </div>
     <br>
@@ -56,11 +55,10 @@
         <label>
             Объём памяти:
             <select name="ram">
-                <option value="64">64</option>
+                <option value="64" selected>64</option>
                 <option value="128">128</option>
                 <option value="256">256</option>
                 <option value="512">512</option>
-                <option value="1024">1024</option>
             </select>
         </label>
     </div>
@@ -79,28 +77,29 @@
     <div>
         <div>Добавить к заказу:</div>
         <label>
-            <input type="checkbox" name="case">Прозрачный чехол
+            <input type="checkbox" name="order-add[]" value="case">Прозрачный чехол
         </label>
         <br>
         <label>
-            <input type="checkbox" name="magsafe">Безпроводное зарядное устройство MagSafe
+            <input type="checkbox" name="order-add[]" value="magsafe">Безпроводное зарядное устройство MagSafe
         </label>
         <br>
         <label>
-            <input type="checkbox" name="airpods">Наушники AirPods
+            <input type="checkbox" name="order-add[]" value="airpods">Наушники AirPods
         </label>
         <br>
     </div>
     <br>
     <label>
-        <div>Коментарий к заказу:</div>
+        Коментарий к заказу:
         <textarea cols="40" rows="10" name="comment"></textarea>
     </label>
     <br>
     <br>
     <label>
-        <input type="checkbox">Принимаю <a href="#"> условия сайта</a>
+        <input type="checkbox" name="agreed" value="1" required>Принимаю <a href="https://ya.ru/"> условия сайта</a>
     </label>
+
     <br>
     <br>
     <button type="submit">Заказать</button>
